@@ -39,6 +39,6 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 
-getgenv().script_key = getgenv().STAB.Key
+getgenv().script_key = tostring(getgenv().STAB.Key or "")
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/eb4ceb08a37d65d65837ba2f515003e3.lua"))()
